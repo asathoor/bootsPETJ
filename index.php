@@ -1,0 +1,50 @@
+<?php get_header(); ?>
+
+<header>
+	<!-- site title -->
+	<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+
+	<!-- site tagline -->
+	<h2><?php bloginfo('description'); ?></h2>
+</header>
+
+
+<!-- menu -->
+<div class="menu">
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+</div>
+
+<!-- left margin -->
+<div id="content-row" class="row">
+	<div id="content" class="col-sm-1 col-md-2 col-lg-1">
+</div>
+
+<div id="content" class="col-sm-11 col-md-6 col-lg-6">
+
+		<!-- loop -->
+		<?php
+		// The Loop
+		if ( have_posts() ) {
+			while ( have_posts() ) {
+				the_post();
+				the_title( '<h3 id="article-title">', '</h3>' );
+				echo "<p>" . get_the_author() . "</p>"; 
+				echo "\n<article>\n";
+					the_content();
+				echo "\n</article>\n";
+			}
+		}
+		?>
+
+	</div> <!-- ends content -->
+
+	<!-- Sidebar -->
+	<div id="sidebar" class="col-sm-12 col-md-4 col-lg-4">
+		<?php get_sidebar(); ?>
+	</div><!-- ends sidebar -->
+</div><!-- ends content row -->
+
+
+</div> <!-- ends container -->
+
+<?php get_footer(); ?>

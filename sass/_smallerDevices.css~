@@ -1,0 +1,77 @@
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+
+// size
+$menuWidth: 125px;
+$height: 30px;
+$menuPadding: 5px;
+
+// color
+$menuBackground: olive;
+$menuColor: white;
+$menuHoverColor: silver;
+
+// space
+$padding: 10px;
+
+/* the menu */
+#menu-dawn {
+
+    display: block;
+    float: left;
+	position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: $height;
+
+	background-color: $menuBackground;
+
+	li {
+		width: $menuWidth;
+
+		a {
+			color: $menuColor;
+			text-decoration: none;
+		}
+
+		a:hover {
+			background-color: $menuHoverColor;
+		}
+
+	}
+
+	 ul {
+		li {
+			background-color: $menuBackground;
+					a:hover {
+						background-color: $menuHoverColor;
+					}
+		}
+	}
+
+
+	// submenu visible on hover - see: https://jonbellah.com/create-a-simple-css-dropdown/
+	li:hover > ul { 
+
+		visibility: visible;
+		position: relative;
+		padding-left:0px;
+		z-index: 7777;
+		width: $menuWidth;
+	}
+}
+
+/* remove bullets */
+.menu-header li,div.menu li {
+    float: left;
+    position: relative;	
+	list-style:none;
+}
+
+/*hide and position sub-menu*/
+.sub-menu {
+	visibility: hidden;
+	width: 0px;
+}
+
+}

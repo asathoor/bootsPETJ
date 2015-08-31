@@ -1,0 +1,112 @@
+/* file: screen.scss */
+/* file: _smallerDevices (below 958px) */
+/*  RESPONSIVE MENU */
+@media screen and (max-width: 958px) {
+  body {
+    font-size: 200%; }
+
+  header h1 a {
+    text-align: center;
+    display: block;
+    top: 10px;
+    font-size: 20px;
+    background: rgba(24, 32, 137, 0.4); }
+
+  header h1 a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none; }
+
+  header h2 {
+    visibility: hidden; }
+
+  .menu-dawn-container {
+    background-color: black; }
+    .menu-dawn-container ul {
+      padding: 0;
+      list-style-type: none; }
+
+  #menu-dawn {
+    background-color: black; }
+    #menu-dawn li {
+      display: block; }
+    #menu-dawn li a {
+      color: white; }
+    #menu-dawn li:nth-child(odd) {
+      background-color: black; }
+    #menu-dawn li:nth-child(even) {
+      background-color: #1a0323; }
+    #menu-dawn ul li a {
+      color: white; } }
+/* LARGE SCREENS ----------- */
+@media only screen and (min-width: 960px) {
+  /* horisontal and remove bullets */
+  #menu-dawn {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    background-color: black; }
+    #menu-dawn li {
+      width: 125px; }
+      #menu-dawn li a {
+        color: white;
+        text-decoration: none; }
+        #menu-dawn li a:hover {
+          background: #590b75; }
+    #menu-dawn ul li {
+      background-color: black; }
+      #menu-dawn ul li a:hover {
+        background-color: silver; }
+    #menu-dawn li:hover > ul {
+      visibility: visible;
+      position: relative;
+      padding-left: 0px;
+      z-index: 7777;
+      width: 125px; }
+
+  /* remove bullets */
+  .menu-header li, div.menu li {
+    float: left;
+    position: relative;
+    list-style: none; }
+
+  /*hide and position sub-menu*/
+  .sub-menu {
+    visibility: hidden;
+    width: 0px; } }
+/* colors */
+/* design */
+body {
+  margin: 0px; }
+
+#content, #theSidebar {
+  background: #fff; }
+
+p {
+  padding: 10px; }
+
+h1, h2 {
+  margin-top: 0px; }
+
+header {
+  clear: both;
+  background: url(../images/bg.jpg);
+  text-align: right;
+  height: 80px; }
+  header h1 {
+    display: block;
+    background: rgba(54, 140, 84, 0.4);
+    font-size: 4em;
+    display: block; }
+    header h1 a {
+      color: #fff; }
+  header h2 {
+    display: block;
+    color: #e7df76;
+    background: rgba(24, 32, 137, 0.4);
+    padding: 0;
+    font-size: 1.3em;
+    position: relative;
+    top: -10px; }

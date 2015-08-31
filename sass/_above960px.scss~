@@ -1,0 +1,69 @@
+// file: _above960px.scss 
+// purpose: responsive menu e.g. for laptops
+
+// the variables are found in _global.scss
+
+/* LARGE SCREENS ----------- */
+@media only screen  and (min-width : 960px) {
+
+/* horisontal and remove bullets */
+#menu-dawn {
+
+	// inline list
+    display: block;
+    float: left;
+	position: relative;
+    margin: 0 auto;
+    //width: 100%;
+    height: $height;
+	background-color: $menuBackground;
+
+	li {
+		width: $menuWidth;
+
+		a {
+			color: $menuColor;
+			text-decoration: none;
+			
+			// below: nice alias for a:hover { .. etc .. }
+			&:hover { background: $menuAltBackground; }
+		}
+
+	}
+
+	 ul {
+		li {
+			background-color: $menuBackground;
+					a:hover {
+						background-color: $menuHoverColor;
+					}
+		}
+	}
+
+
+	// submenu visible on hover - see: https://jonbellah.com/create-a-simple-css-dropdown/
+	li:hover > ul { 
+
+		visibility: visible;
+		position: relative;
+		padding-left:0px;
+		z-index: 7777;
+		width: $menuWidth;
+	}
+}
+
+/* remove bullets */
+.menu-header li,div.menu li {
+    float: left;
+    position: relative;	
+	list-style:none;
+}
+
+/*hide and position sub-menu*/
+.sub-menu {
+	visibility: hidden;
+	width: 0px;
+}
+
+} // ends media large screens
+

@@ -1,0 +1,29 @@
+// file: _globals.scss
+// Purpose: hold global variables such as colors
+
+// globals are defined via the !global flag.
+// they are imported via _screen.scss
+
+// === COLORS AND SPACE ===
+
+// size
+$menuWidth: 125px !global;
+$height: 30px !global;
+$menuPadding: 5px !global;
+
+// color
+$menuBackground: black !global;
+$menuColor: white;
+$menuHoverColor: silver !global;
+$menuAltBackground: #590b75 !global;
+
+// smaller devices
+$green: #368c54 !global;
+$blue: #182089 !global;
+$brown: #891820 !global;
+
+// space
+$padding: 10px !global;
+
+
+

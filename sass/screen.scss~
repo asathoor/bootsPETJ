@@ -1,0 +1,65 @@
+/* file: screen.scss */
+
+/* === IMPORTS === */
+
+
+// Imports: since the total css is compiled the import will not slow down via extra http-requests.
+
+// global vars
+@import "_globals"; // imports the file _globals.scss
+
+// menu styles for smaller devices
+@import "_smallerDevices"; // imports the file _above960px.scss
+
+// large screens menu
+@import "_above960px"; // imports the file _above960px.scss
+
+/* colors */
+$green: #368c54;
+$blue: #182089;
+$brown: #891820;
+
+/* design */
+body {    
+    margin: 0px;
+}
+#content, #theSidebar,  {
+	background: #fff;
+}
+
+p {
+	padding: 10px;
+}
+
+h1, h2 {
+	margin-top: 0px;
+}
+
+header {
+
+	clear: both;
+	background: url(../images/bg.jpg);
+	text-align: right;
+	height: 80px;
+
+	h1 {
+		display: block;
+		background: transparentize($green, .6);
+		font-size: 4em;
+		display: block;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	h2 {
+		display: block;
+		color: invert($blue	);
+		background: transparentize($blue, .6);
+		padding:0;
+		font-size: 1.3em;
+		position:relative;
+		top: -10px;
+	}
+}

@@ -1,0 +1,32 @@
+/* 
+file: screen.scss 
+*/
+/* the horizontal menu (large devices) */
+/* variables */
+/* horisontal menu */
+#menu-dawn {
+  background-color: yellow; }
+  #menu-dawn li a {
+    background-color: pink;
+    text-decoration: none; }
+  #menu-dawn li a:hover {
+    background-color: silver; }
+  #menu-dawn ul li a {
+    color: green;
+    position: absolute; }
+  #menu-dawn ul li a:hover {
+    background-color: inverse(pink); }
+
+/* hide sub-menu */
+.menu-item-has-children ul, .menu-item-has-children ul ul, .menu-item-has-children ul ul ul {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  background-color: green; }
+
+/* make sub-menu visible by hover */
+.menu-item-has-children:hover ul {
+  visibility: visible;
+  height: 30px;
+  width: auto;
+  z-index: 9999; }
